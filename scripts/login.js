@@ -9,6 +9,8 @@ document.getElementById("btn-login").addEventListener("click", function (event) 
 
   console.log(myNum, number);
   if (myNum === number && myPin === pin) {
-    console.log(myNum, number);
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid phone number or pin");
   }
 });
