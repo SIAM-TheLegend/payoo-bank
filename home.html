@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-neutral-200 min-h-screen pt-5">
+  <body class="bg-neutral-200 min-h-svh pt-5">
     <div class="stats block w-fit mx-auto bg-neutral-100 shadow">
       <div class="stat text-center">
         <div class="stat-title text-neutral-400">Available Balance</div>
@@ -17,19 +17,20 @@
     </div>
     <div class="divider"></div>
     <div class="grid grid-cols-2">
-      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Add money</button>
-      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Cash out</button>
+      <button id="btn-add-money" class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Add money</button>
+      <button id="btn-cash-out" class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Cash out</button>
     </div>
 
     <div class="divider"></div>
 
-    <div class="card bg-neutral-100 w-[calc(100vw-8vw)] mx-auto shrink-0 shadow-2xl">
+    <!-- ADD MONEY SECTION -->
+    <div id="section-add-money" class="card bg-neutral-100 w-[calc(100vw-8vw)] mx-auto shrink-0 shadow-2xl">
       <form class="card-body">
         <div class="form-control">
           <label class="label">
             <span class="label-text text-neutral-400 font-semibold">Amount</span>
           </label>
-          <input id="amount" type="number" placeholder="Enter your amount" class="input input-bordered bg-neutral-200 text-neutral-800" required />
+          <input id="amount" type="number" placeholder="Amount of add money" class="input input-bordered bg-neutral-200 text-neutral-800" required />
         </div>
         <div class="form-control">
           <label class="label">
@@ -39,7 +40,27 @@
         </div>
         <div class="form-control mt-6">
           <button id="btn-addMoney" class="btn btn-accent">Add Money</button>
-          <button id="btn-cashOut" class="btn btn-accent">Cash Out</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- CASH OUT SECTION -->
+    <div id="section-cash-out" class="hidden card bg-neutral-100 w-[calc(100vw-8vw)] mx-auto shrink-0 shadow-2xl">
+      <form class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text text-neutral-400 font-semibold">Amount</span>
+          </label>
+          <input id="amount" type="number" placeholder="Amount of cash out" class="input input-bordered bg-neutral-200 text-neutral-800" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text text-neutral-400 font-semibold">Pin</span>
+          </label>
+          <input id="pin" type="number" placeholder="Verify your pin" class="input input-bordered bg-neutral-200 text-neutral-800" required />
+        </div>
+        <div class="form-control mt-6">
+          <button id="btn-cashOut" class="btn btn-accent">Cash out</button>
         </div>
       </form>
     </div>
