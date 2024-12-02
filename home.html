@@ -10,15 +10,15 @@
 
   <body class="bg-neutral-200 min-h-screen pt-5">
     <div class="stats block w-fit mx-auto bg-neutral-100 shadow">
-      <div class="stat">
+      <div class="stat text-center">
         <div class="stat-title text-neutral-400">Available Balance</div>
-        <div class="stat-value text-neutral-500">89,400</div>
+        <div id="balance" class="stat-value text-neutral-500">9400</div>
       </div>
     </div>
     <div class="divider"></div>
     <div class="grid grid-cols-2">
-      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Withdraw</button>
-      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Deposit</button>
+      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Add money</button>
+      <button class="btn bg-neutral-200 hover:bg-neutral-300 text-neutral-800 btn-lg w-4/5 block mx-auto">Cash out</button>
     </div>
 
     <div class="divider"></div>
@@ -29,18 +29,21 @@
           <label class="label">
             <span class="label-text text-neutral-400 font-semibold">Amount</span>
           </label>
-          <input type="number" placeholder="Enter your amount of withdrawal" class="input input-bordered bg-neutral-200 text-neutral-800" required />
+          <input id="amount" type="number" placeholder="Enter your amount" class="input input-bordered bg-neutral-200 text-neutral-800" required />
         </div>
         <div class="form-control">
           <label class="label">
             <span class="label-text text-neutral-400 font-semibold">Pin</span>
           </label>
-          <input type="number" placeholder="Verify your pin" class="input input-bordered bg-neutral-200 text-neutral-800" required />
+          <input id="pin" type="number" placeholder="Verify your pin" class="input input-bordered bg-neutral-200 text-neutral-800" required />
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-accent">Withdraw</button>
+          <button id="btn-addMoney" class="btn btn-accent">Add Money</button>
+          <button id="btn-cashOut" class="btn btn-accent">Cash Out</button>
         </div>
       </form>
     </div>
+
+    <script src="scripts/home.js"></script>
   </body>
 </html>
